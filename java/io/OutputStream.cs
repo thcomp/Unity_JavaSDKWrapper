@@ -6,18 +6,8 @@ using UnityEngine;
 
 namespace java.io
 {
-    abstract public class OutputStream
+    abstract public class OutputStream : BaseAndroidJavaObjectWrapper
     {
-        internal AndroidJavaObject mAndroidJO;
-
-        public AndroidJavaObject AndroidJO
-        {
-            get
-            {
-                return mAndroidJO;
-            }
-        }
-
         public void Close()
         {
             mAndroidJO.Call("close");
